@@ -89,7 +89,6 @@ movie-recommendation-system/
 ```
 
 *Project files will be added and organized as the repository is developed.*
-
 ## Future Work
 
 The next phase of the project will focus on improving the recommendation performance by exploring additional modelling approaches, richer movie information, and stronger ensemble techniques.
