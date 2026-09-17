@@ -1,0 +1,7 @@
+Model,Configuration,Validation RMSE
+Global Mean Baseline,No configuration,1.060875
+User + Movie Bias,No configuration,0.880608
+Tuned User + Movie Bias,"User Reg: 10, Movie Reg: 20",0.880417
+Initial SVD ,"50 factors, 20 epochs",0.906448
+Tuned SVD,"20 factors, 20 epochs, reg: 0.05",0.898068
+SVD + Bias Ensemble,"User + Movie Bias: 75%, SVD: 25%",0.877906
