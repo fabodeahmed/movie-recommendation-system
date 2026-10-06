@@ -89,7 +89,7 @@ movie-recommendation-system/
 
 ## Project Presentation
 
-[View Phase One Presentation on Canva](https://canva.link/gdmozhrmjthqsr1)
+🎥 [Watch the Phase One Presentation on YouTube](https://youtu.be/rJpq3Xykl8A)
 
 ## Future Work
 
