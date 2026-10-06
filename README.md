@@ -67,7 +67,6 @@ The ensemble combined predictions from the tuned User + Movie Bias model and the
 * Python
 * Pandas
 * NumPy
-* Scikit-learn
 * Surprise
 * Matplotlib
 * Jupyter Notebook
@@ -79,7 +78,7 @@ movie-recommendation-system/
 │
 ├── README.md
 ├── notebook/
-│   └── movie_recommendation_system.ipynb
+│   └── Movie_Recommendation_Phase_One.ipynb
 │
 ├── presentation/
 │   └── movie_recommendation_presentation.pdf
@@ -88,7 +87,10 @@ movie-recommendation-system/
     └── model_results.csv
 ```
 
-*Project files will be added and organized as the repository is developed.*
+## Project Presentation
+
+[View Phase One Presentation on Canva](https://canva.link/vruepsj28oxuk1o)
+
 ## Future Work
 
 The next phase of the project will focus on improving the recommendation performance by exploring additional modelling approaches, richer movie information, and stronger ensemble techniques.
