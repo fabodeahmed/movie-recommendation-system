@@ -32,16 +32,24 @@ Initial analysis showed that:
 
 ## Models
 
-The following approaches were evaluated:
+### Phase One
 
-1. **Global Mean Baseline**
-2. **User + Movie Bias**
-3. **Tuned User + Movie Bias**
-4. **SVD (Matrix Factorization)**
-5. **Tuned SVD**
-6. **SVD + Bias Ensemble**
+1. Global Mean Baseline
+2. User + Movie Bias
+3. Tuned User + Movie Bias
+4. SVD (Matrix Factorization)
+5. Tuned SVD
+6. SVD + Bias Ensemble
+
+### Phase Two
+
+1. SVD++ (Improved Collaborative Filtering)
+2. SVD++ Hyperparameter Tuning
+3. SVD++ + User and Movie Bias Ensemble
 
 ## Model Performance
+
+### Phase One Results
 
 Performance was evaluated using **RMSE**, where lower values indicate better performance.
 
@@ -54,13 +62,24 @@ Performance was evaluated using **RMSE**, where lower values indicate better per
 | Tuned SVD               |        0.898068 |
 | **SVD + Bias Ensemble** |    **0.877906** |
 
-## Final Model
+### Phase One Best Model
 
 The **SVD + Bias Ensemble** achieved the best validation performance with an RMSE of:
 
 ### **0.877906**
 
 The ensemble combined predictions from the tuned User + Movie Bias model and the tuned SVD model.
+
+### Phase Two Results
+
+| Model                     | Configuration                         | Validation RMSE |
+| ------------------------- | ------------------------------------- | --------------: |
+| Tuned SVD++               | 40 factors, 8 epochs                  |        0.842391 |
+| **SVD++ + Bias Ensemble** | **70% SVD++ + 30% User + Movie Bias** |    **0.834601** |
+
+The tuned SVD++ model achieved a validation RMSE of **0.842391** using 40 factors and 8 epochs. Combining SVD++ with the User + Movie Bias model further improved performance, achieving a validation RMSE of **0.834601**.
+
+**Experimental consistency:** A consistent random seed (`random_state=42`) was maintained across approaches where applicable to support reproducibility and fair model comparison.
 
 ## Tools & Technologies
 
@@ -75,14 +94,12 @@ The ensemble combined predictions from the tuned User + Movie Bias model and the
 
 ```text
 movie-recommendation-system/
-│
 ├── README.md
 ├── notebook/
-│   └── Movie_Recommendation_Phase_One.ipynb
-│
+│   ├── Movie_Recommendation_Phase_One.ipynb
+│   └── Movie_Recommendation_Phase_Two.ipynb
 ├── presentation/
 │   └── movie_recommendation_presentation.pdf
-│
 └── results/
     └── model_results.csv
 ```
@@ -93,7 +110,7 @@ movie-recommendation-system/
 
 ## Future Work
 
-The next phase of the project will focus on improving the recommendation performance by exploring additional modelling approaches, richer movie information, and stronger ensemble techniques.
+Potential improvements include incorporating movie metadata and content-based filtering, exploring hybrid recommendation approaches, and evaluating additional ensemble techniques. Further experimentation could also investigate advanced recommendation architectures and methods for improving prediction accuracy.
 
 ## Author
 
